@@ -114,7 +114,22 @@
             </div>
         </div>
     </footer>
+    <script>
+        const login = document.getElementById("login");
 
+        const status = sessionStorage.getItem("session");
+        if (status) {
+            login.innerHTML = "Logout"
+            login.addEventListener("click", (e) => {
+                e.preventDefault()
+                if (confirm("Are you sure you want to logout?")) {
+                    sessionStorage.removeItem("session")
+                    login.innerHTML = "Login"
+                    window.location.reload()
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>
