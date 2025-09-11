@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Valorant Boosting</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-black font-mono w-screen h-screen text-white">
+    <!-- HEADER -->
+    <header class="w-full text-white p-4 text-sm md:text-base fixed z-10 bg-black/20">
+        <div class="mx-auto flex justify-between items-center max-w-[1200px] w-full">
+            <div class="flex flex-wrap justify-center items-center cursor-pointer">
+                <img src="./images/valorant.webp" class="w-8" />
+                <a href="./home.html">
+                    <h1 class="text-lg md:text-3xl font-bold">ValBoost</h1>
+                </a>
+            </div>
+            <ul class="flex flex-wrap gap-2 md:gap-6 ml-auto">
+                <li><a href="./home.html"
+                        class="list-none hover:bg-white hover:text-black p-2 md:px-4 md:py-2 rounded-lg cursor-pointer">Home</a>
+                </li>
+                <li><a href="./services.html"
+                        class="list-none hover:bg-white hover:text-black p-2 md:px-4 md:py-2 rounded-lg cursor-pointer">Services</a>
+                </li>
+                <li><a href="./portfolio.html"
+                        class="list-none hover:bg-white hover:text-black p-2 md:px-4 md:py-2 rounded-lg cursor-pointer">Portfolio</a>
+                </li>
+                <li><a href="./about.html"
+                        class="list-none hover:bg-white hover:text-black p-2 md:px-4 md:py-2 rounded-lg cursor-pointer">About
+                        Us</a>
+                </li>
+                <li><a href="./contact.html"
+                        class="list-none hover:bg-white hover:text-black p-2 md:px-4 md:py-2 rounded-lg cursor-pointer">Contact
+                        Us</a></li>
+                <li><a href="./login.html"
+                        class="list-none hover:bg-white/80 bg-white text-black  p-2 md:px-4 md:py-2 rounded-lg cursor-pointer"
+                        id="login">Login</a>
+                </li>
+
+            </ul>
+            <ul>
+
+            </ul>
+        </div>
+    </header>
+
+    <!-- BODY -->
+    <main
+        class="text-white w-full h-full flex flex-col space-y-2 justify-center items-center bg-[url(./images/valorantWallpaper3.jpg)] bg-center bg-cover relative z-1">
+        <!-- CARD 1 -->
+        <div
+            class="mt-40 lg:mt-0 max-w-[900px] w-full justify-between items-center flex flex-wrap p-8 bg-black border-2 drop-shadow-[0_0_16px_white] border-white z-1 space-y-8">
+            <div class="flex sm:flex-col sm:w-[30%] gap-4 sm:gap-0">
+                <h1 class="text-4xl sm:text-5xl font-extrabold">Rank <br /> Boosting</h1>
+                <p>Get the Rank You Want with Our Valorant Boosting Solutions</p>
+            </div>
+            <div class="flex items-center">
+                <div class="flex flex-col items-center gap-4 w-full">
+                    <img id="current_rank_img1" src="./images/Iron_1_Rank.webp"
+                        class="w-[60px] sm:w-[120px] text-cyan-500 text-shadow-lg text-shadow-cyan-100/50 drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]" />
+                    <select id="current_rank_selection1"
+                        class="text-2xl sm:text-3xl bg-black font-semibold w-30 sm:w-50 text-center">
+                        <option value="Iron_1_Rank.webp" class="text-2xl">Iron 1</option>
+                        <option value="Iron_2_Rank.webp" class="text-2xl">Iron 2</option>
+                        <option value="Iron_3_Rank.webp" class="text-2xl">Iron 3</option>
+                        <option value="Bronze_1_Rank.webp" class="text-2xl">Bronze 1</option>
+                        <option value="Bronze_2_Rank.webp" class="text-2xl">Bronze 2</option>
+                        <option value="Bronze_3_Rank.webp" class="text-2xl">Bronze 3</option>
+                        <option value="Silver_1_Rank.webp" class="text-2xl">Silver 1</option>
+                        <option value="Silver_2_Rank.webp" class="text-2xl">Silver 2</option>
+                        <option value="Silver_3_Rank.webp" class="text-2xl">Silver 3</option>
+                        <option value="Gold_1_Rank.webp" class="text-2xl">Gold 1</option>
+                        <option value="Gold_2_Rank.webp" class="text-2xl">Gold 2</option>
+                        <option value="Gold_3_Rank.webp" class="text-2xl">Gold 3</option>
+                        <option value="Platinum_1_Rank.webp" class="text-2xl">Platinum 1</option>
+                        <option value="Platinum_2_Rank.webp" class="text-2xl">Platinum 2</option>
+                        <option value="Platinum_3_Rank.webp" class="text-2xl">Platinum 3</option>
+                        <option value="Diamond_1_Rank.webp" class="text-2xl">Diamond 1</option>
+                        <option value="Diamond_2_Rank.webp" class="text-2xl">Diamond 2</option>
+                        <option value="Diamond_3_Rank.webp" class="text-2xl">Diamond 3</option>
+                        <option value="Ascendant_1_Rank.webp" class="text-2xl">Ascendant 1</option>
+                        <option value="Ascendant_2_Rank.webp" class="text-2xl">Ascendant 2</option>
+                        <option value="Ascendant_3_Rank.webp" class="text-2xl">Ascendant 3</option>
+                        <option value="Immortal_1_Rank.webp" class="text-2xl">Immortal 1</option>
+                        <option value="Immortal_2_Rank.webp" class="text-2xl">Immortal 2</option>
+                        <option value="Immortal_3_Rank.webp" class="text-2xl">Immortal 3</option>
+                        <option value="Radiant_Rank.webp" class="text-2xl">Radiant</option>
+                    </select>
+                </div>
+                <p class="text-[40px] sm:text-[60px] -tracking-[16px] p-2 sm:p-8"> >>> </p>
+                <div class="flex flex-col items-center gap-4">
+                    <img id="target_rank_img1" src="./images/Radiant_Rank.webp"
+                        class="w-[60px] sm:w-[120px] drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]" />
+                    <select id="target_rank_selection1"
+                        class="text-2xl sm:text-3xl bg-black font-semibold w-30 sm:w-50 text-center">
+                        <option value="Iron_1_Rank.webp" class="text-2xl">Iron 1</option>
+                        <option value="Iron_2_Rank.webp" class="text-2xl">Iron 2</option>
+                        <option value="Iron_3_Rank.webp" class="text-2xl">Iron 3</option>
+                        <option value="Bronze_1_Rank.webp" class="text-2xl">Bronze 1</option>
+                        <option value="Bronze_2_Rank.webp" class="text-2xl">Bronze 2</option>
+                        <option value="Bronze_3_Rank.webp" class="text-2xl">Bronze 3</option>
+                        <option value="Silver_1_Rank.webp" class="text-2xl">Silver 1</option>
+                        <option value="Silver_2_Rank.webp" class="text-2xl">Silver 2</option>
+                        <option value="Silver_3_Rank.webp" class="text-2xl">Silver 3</option>
+                        <option value="Gold_1_Rank.webp" class="text-2xl">Gold 1</option>
+                        <option value="Gold_2_Rank.webp" class="text-2xl">Gold 2</option>
+                        <option value="Gold_3_Rank.webp" class="text-2xl">Gold 3</option>
+                        <option value="Platinum_1_Rank.webp" class="text-2xl">Platinum 1</option>
+                        <option value="Platinum_2_Rank.webp" class="text-2xl">Platinum 2</option>
+                        <option value="Platinum_3_Rank.webp" class="text-2xl">Platinum 3</option>
+                        <option value="Diamond_1_Rank.webp" class="text-2xl">Diamond 1</option>
+                        <option value="Diamond_2_Rank.webp" class="text-2xl">Diamond 2</option>
+                        <option value="Diamond_3_Rank.webp" class="text-2xl">Diamond 3</option>
+                        <option value="Ascendant_1_Rank.webp" class="text-2xl">Ascendant 1</option>
+                        <option value="Ascendant_2_Rank.webp" class="text-2xl">Ascendant 2</option>
+                        <option value="Ascendant_3_Rank.webp" class="text-2xl">Ascendant 3</option>
+                        <option value="Immortal_1_Rank.webp" class="text-2xl">Immortal 1</option>
+                        <option value="Immortal_2_Rank.webp" class="text-2xl">Immortal 2</option>
+                        <option value="Immortal_3_Rank.webp" class="text-2xl">Immortal 3</option>
+                        <option value="Radiant_Rank.webp" class="text-2xl" selected>Radiant</option>
+                    </select>
+                </div>
+            </div>
+            <div class="flex">
+                <button onclick="calculateRankBoost()" class="bg-white text-black px-4">
+                    Calculate Price
+                </button>
+                <p id="rank_boost_price"></p>
+            </div>
+        </div>
+
+
+        <!-- CARD 2 -->
+        <div
+            class="max-w-[900px] w-full justify-between items-center flex flex-wrap p-8 bg-black border-2 drop-shadow-[0_0_16px_white] border-white z-1 space-y-8">
+            <div class="flex sm:flex-col sm:w-[30%] gap-4 sm:gap-0">
+                <h1 class="text-4xl sm:text-5xl font-extrabold">Duo <br /> Games</h1>
+                <p>Duo Games with guaranteed Booster performance and no minimum Win Ratio</p>
+            </div>
+            <div class="flex items-center">
+                <div class="flex flex-col items-center gap-4 w-full">
+                    <img id="current_rank_img2" src="./images/Iron_1_Rank.webp"
+                        class="w-[60px] sm:w-[120px] text-cyan-500 text-shadow-lg text-shadow-cyan-100/50 drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]" />
+                    <select id="current_rank_selection2"
+                        class="text-2xl sm:text-3xl bg-black font-semibold w-30 sm:w-50 text-center">
+                        <option value="Iron_1_Rank.webp" class="text-2xl">Iron 1</option>
+                        <option value="Iron_2_Rank.webp" class="text-2xl">Iron 2</option>
+                        <option value="Iron_3_Rank.webp" class="text-2xl">Iron 3</option>
+                        <option value="Bronze_1_Rank.webp" class="text-2xl">Bronze 1</option>
+                        <option value="Bronze_2_Rank.webp" class="text-2xl">Bronze 2</option>
+                        <option value="Bronze_3_Rank.webp" class="text-2xl">Bronze 3</option>
+                        <option value="Silver_1_Rank.webp" class="text-2xl">Silver 1</option>
+                        <option value="Silver_2_Rank.webp" class="text-2xl">Silver 2</option>
+                        <option value="Silver_3_Rank.webp" class="text-2xl">Silver 3</option>
+                        <option value="Gold_1_Rank.webp" class="text-2xl">Gold 1</option>
+                        <option value="Gold_2_Rank.webp" class="text-2xl">Gold 2</option>
+                        <option value="Gold_3_Rank.webp" class="text-2xl">Gold 3</option>
+                        <option value="Platinum_1_Rank.webp" class="text-2xl">Platinum 1</option>
+                        <option value="Platinum_2_Rank.webp" class="text-2xl">Platinum 2</option>
+                        <option value="Platinum_3_Rank.webp" class="text-2xl">Platinum 3</option>
+                        <option value="Diamond_1_Rank.webp" class="text-2xl">Diamond 1</option>
+                        <option value="Diamond_2_Rank.webp" class="text-2xl">Diamond 2</option>
+                        <option value="Diamond_3_Rank.webp" class="text-2xl">Diamond 3</option>
+                        <option value="Ascendant_1_Rank.webp" class="text-2xl">Ascendant 1</option>
+                        <option value="Ascendant_2_Rank.webp" class="text-2xl">Ascendant 2</option>
+                        <option value="Ascendant_3_Rank.webp" class="text-2xl">Ascendant 3</option>
+                        <option value="Immortal_1_Rank.webp" class="text-2xl">Immortal 1</option>
+                        <option value="Immortal_2_Rank.webp" class="text-2xl">Immortal 2</option>
+                        <option value="Immortal_3_Rank.webp" class="text-2xl">Immortal 3</option>
+                        <option value="Radiant_Rank.webp" class="text-2xl">Radiant</option>
+                    </select>
+                </div>
+                <p class="text-[40px] sm:text-[60px] -tracking-[16px] p-2 sm:p-8"> >>> </p>
+                <div class="flex flex-col items-center gap-4">
+                    <img id="target_rank_img2" src="./images/Radiant_Rank.webp"
+                        class="w-[60px] sm:w-[120px] drop-shadow-[0_0_20px_rgba(255,255,255,0.8)]" />
+                    <select id="target_rank_selection2"
+                        class="text-2xl sm:text-3xl bg-black font-semibold w-30 sm:w-50 text-center">
+                        <option value="Iron_1_Rank.webp" class="text-2xl">Iron 1</option>
+                        <option value="Iron_2_Rank.webp" class="text-2xl">Iron 2</option>
+                        <option value="Iron_3_Rank.webp" class="text-2xl">Iron 3</option>
+                        <option value="Bronze_1_Rank.webp" class="text-2xl">Bronze 1</option>
+                        <option value="Bronze_2_Rank.webp" class="text-2xl">Bronze 2</option>
+                        <option value="Bronze_3_Rank.webp" class="text-2xl">Bronze 3</option>
+                        <option value="Silver_1_Rank.webp" class="text-2xl">Silver 1</option>
+                        <option value="Silver_2_Rank.webp" class="text-2xl">Silver 2</option>
+                        <option value="Silver_3_Rank.webp" class="text-2xl">Silver 3</option>
+                        <option value="Gold_1_Rank.webp" class="text-2xl">Gold 1</option>
+                        <option value="Gold_2_Rank.webp" class="text-2xl">Gold 2</option>
+                        <option value="Gold_3_Rank.webp" class="text-2xl">Gold 3</option>
+                        <option value="Platinum_1_Rank.webp" class="text-2xl">Platinum 1</option>
+                        <option value="Platinum_2_Rank.webp" class="text-2xl">Platinum 2</option>
+                        <option value="Platinum_3_Rank.webp" class="text-2xl">Platinum 3</option>
+                        <option value="Diamond_1_Rank.webp" class="text-2xl">Diamond 1</option>
+                        <option value="Diamond_2_Rank.webp" class="text-2xl">Diamond 2</option>
+                        <option value="Diamond_3_Rank.webp" class="text-2xl">Diamond 3</option>
+                        <option value="Ascendant_1_Rank.webp" class="text-2xl">Ascendant 1</option>
+                        <option value="Ascendant_2_Rank.webp" class="text-2xl">Ascendant 2</option>
+                        <option value="Ascendant_3_Rank.webp" class="text-2xl">Ascendant 3</option>
+                        <option value="Immortal_1_Rank.webp" class="text-2xl">Immortal 1</option>
+                        <option value="Immortal_2_Rank.webp" class="text-2xl">Immortal 2</option>
+                        <option value="Immortal_3_Rank.webp" class="text-2xl">Immortal 3</option>
+                        <option value="Radiant_Rank.webp" class="text-2xl" selected>Radiant</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div
+            class="mx-auto justify-between max-w-[1200px] w-full p-6 md:p-12 space-y-4 gap-4 grid md:grid-cols-3 grid-cols-1 ">
+            <div class="border-b-1 md:border-b-0 pb-4 md:border-r-1 md:pr-4 md:mr-4 space-y-2">
+                <h4 class="text-xl md:text-3xl font-bold">ValBoost</h4>
+                <p class="text-sm md:text-base text-white/60 text-justify">
+                    ValBoost isnt endorsed or in any way affiliated with Riot Games. All trademarks and logos belong
+                    to their respective owners. All submitted art content remains copyright of its original copyright
+                    holder.
+                </p>
+                <p class="text-white/60">&copy; 2025 ValBoost.com | All Rights Reserved</p>
+            </div>
+            <div class="border-b-1 md:border-b-0 pb-4 md:border-r-1 md:pr-4 md:mr-4 space-y-2">
+                <h4 class="text-xl md:text-3xl font-bold">Quick Links</h4>
+                <ul class="text-sm md:text-base text-white/60 list-disc">
+                    <li><a href="./home.html" class="hover:bg-white hover:text-black">Home</a>
+                    </li>
+                    <li><a href="./services.html" class="hover:bg-white hover:text-black">Services</a>
+                    </li>
+                    <li><a href="./portfolio.html" class="hover:bg-white hover:text-black">Portfolio</a>
+                    </li>
+                    <li><a href="./about.html" class="hover:bg-white hover:text-black">About
+                            Us</a>
+                    </li>
+                    <li><a href="./contact.html" class="hover:bg-white hover:text-black">Contact
+                            Us</a></li>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="space-y-2">
+                <h4 class="text-xl md:text-3xl font-bold">Got Any Questions?</h4>
+                <p class="text-sm md:text-base text-white/60 text-justify">We have a dedicated team of customer service
+                    representatives to
+                    help you with
+                    any questions.
+                </p>
+                <a href="./contact.html"
+                    class="bg-white text-black text-xl rounded-lg px-6 py-2 font-bold cursor-pointer hover:bg-white/80">Contact
+                    Us
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const login = document.getElementById("login");
+
+        const status = sessionStorage.getItem("session");
+        if (status) {
+            login.innerHTML = "Logout"
+            login.addEventListener("click", (e) => {
+                e.preventDefault()
+                if (confirm("Are you sure you want to logout?")) {
+                    sessionStorage.removeItem("session")
+                    login.innerHTML = "Login"
+                    window.location.reload()
+                }
+            })
+        }
+
+
+        const current_rank_selection1 = document.getElementById("current_rank_selection1");
+        const target_rank_selection1 = document.getElementById("target_rank_selection1");
+        const current_rank_img1 = document.getElementById("current_rank_img1");
+        const target_rank_img1 = document.getElementById("target_rank_img1");
+        const current_rank_selection2 = document.getElementById("current_rank_selection2");
+        const target_rank_selection2 = document.getElementById("target_rank_selection2");
+        const current_rank_img2 = document.getElementById("current_rank_img2");
+        const target_rank_img2 = document.getElementById("target_rank_img2");
+
+
+        // RANK BOOSTING
+        current_rank_selection1.addEventListener("change", () => {
+            current_rank_img1.src = `./images/${current_rank_selection1.value}`;
+        });
+
+        target_rank_selection1.addEventListener("change", () => {
+            target_rank_img1.src = `./images/${target_rank_selection1.value}`;
+        });
+
+        // DUO GAMES
+        current_rank_selection2.addEventListener("change", () => {
+            current_rank_img2.src = `./images/${current_rank_selection2.value}`;
+        });
+
+        target_rank_selection2.addEventListener("change", () => {
+            target_rank_img2.src = `./images/${target_rank_selection2.value}`;
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
