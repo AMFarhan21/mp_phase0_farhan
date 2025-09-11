@@ -11,22 +11,24 @@
 
     <main
         class="text-white w-full h-full flex flex-col justify-center items-center bg-[url(./images/valorantWallpaper2.jpg)] bg-center bg-cover relative z-1">
-        <form onsubmit="createUser(event)"
+        <form onsubmit="register(event)"
             class="z-10 mx-auto justify-between items-center max-w-[600px] w-full bg-white text-black p-4 rounded-xl space-y-4">
             <h1 class="font-bold text-4xl text-center drop-shadow-[0_0_8em_#646cffaa]">Register</h1>
-            <input id="username" type="text" placeholder="Enter your username" class="border-b-1 px-4 py-1 w-full" />
-            <input id="email" type="text" placeholder="Enter your email" class="border-b-1 px-4 py-1 w-full" />
+            <input id="username" type="text" placeholder="Enter your username"
+                class="border-b-1 focus:outline-none px-4 py-1 w-full" required />
+            <input id="email" type="text" placeholder="Enter your email"
+                class="border-b-1 focus:outline-none px-4 py-1 w-full" required />
             <input id="password" type="password" placeholder="Enter your password"
-                class="border-b-1 px-4 py-1 w-full" />
+                class="border-b-1 focus:outline-none px-4 py-1 w-full" required />
             <button type="submit" class="bg-red-600 px-6 py-2 rounded-lg text-white w-full">Register</button>
         </form>
         <p class="text-white z-1">
-            Already have an account? <a href="./login.html" class="text-blue-500">Login here</a>
+            Already have an account? <a href="./login.html" class="text-blue-500">Login</a>
         </p>
         <div class="absolute inset-0 bg-black/60 z-0"></div>
     </main>
     <script>
-        async function createUser(e) {
+        async function register(e) {
             e.preventDefault()
 
 
@@ -43,25 +45,25 @@
                     body: JSON.stringify({ username, email, password })
                 });
 
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`)
-                }
 
-                const result = await response.json()
-                console.log(result)
 
-                if (result) {
+                const res = await response.json()
+
+                alert(res.message)
+                if (res.success) {
                     window.location.replace("./login.html")
                 }
-                return result
+
+
+
             } catch (error) {
-                console.error("ERROR on createUser", error)
+                console.error("ERROR on register", error)
                 throw error;
             }
 
         }
 
-        createUser()
+        register()
     </script>
 </body>
 
