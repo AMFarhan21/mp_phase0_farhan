@@ -51,7 +51,7 @@
         class="text-white w-full h-full flex flex-col space-y-2 justify-center items-center bg-[url(./images/valorantWallpaper3.jpg)] bg-center bg-cover relative z-1">
         <!-- CARD 1 -->
         <div
-            class="mt-40 lg:mt-0 max-w-[900px] w-full justify-between items-center flex flex-wrap p-8 bg-black border-2 drop-shadow-[0_0_16px_white] border-white z-1 space-y-8">
+            class="mt-40 lg:mt-20 max-w-[900px] w-full justify-between items-center flex flex-wrap p-8 bg-black border-2 drop-shadow-[0_0_16px_white] border-white z-1 space-y-8">
             <div class="flex sm:flex-col sm:w-[30%] gap-4 sm:gap-0">
                 <h1 class="text-4xl sm:text-5xl font-extrabold">Rank <br /> Boosting</h1>
                 <p>Get the Rank You Want with Our Valorant Boosting Solutions</p>
@@ -123,7 +123,7 @@
                     </select>
                 </div>
             </div>
-            <div class="flex">
+            <div class="flex gap-4">
                 <button onclick="calculateRankBoost()" class="bg-white text-black px-4">
                     Calculate Price
                 </button>
@@ -205,6 +205,12 @@
                         <option value="Radiant_Rank.webp" class="text-2xl" selected>Radiant</option>
                     </select>
                 </div>
+            </div>
+            <div class="flex gap-4">
+                <button onclick="calculateDuoGames()" class="bg-white text-black px-4">
+                    Calculate Price
+                </button>
+                <p id="duo_games_price"></p>
             </div>
         </div>
 
@@ -303,6 +309,65 @@
         });
 
 
+
+        const rank_order = [
+            "iron 1", "iron 2", "iron 3",
+            "bronze 1", "bronze 2", "bronze 3",
+            "silver 1", "silver 2", "silver 3",
+            "gold 1", "gold 2", "gold 3",
+            "platinum 1", "platinum 2", "platinum 3",
+            "diamond 1", "diamond 2", "diamond 3",
+            "ascendant 1", "ascendant 2", "ascendant 3",
+            "immortal 1", "immortal 2", "immortal 3",
+            "radiant"
+        ];
+
+
+
+
+        function calculateRankBoost() {
+            const rank_boost_price_id = document.getElementById('rank_boost_price')
+            const price_per_tier = 30000;
+            let current_rank = current_rank_selection1.value.split("_").slice(0, 2).join(" ").toLowerCase();
+            let target_rank = target_rank_selection1.value !== "Radiant_Rank.webp"
+                ? target_rank_selection1.value.split("_").slice(0, 2).join(" ").toLowerCase()
+                : target_rank_selection1.value.split("_").slice(0, 1).join(" ").toLowerCase();
+
+            let current_index = rank_order.indexOf(current_rank)
+            let target_index = rank_order.indexOf(target_rank)
+
+            let price = (target_index - current_index) * price_per_tier
+
+            if (price === 0) {
+                rank_boost_price_id.innerHTML = "Cannot boost on the same rank"
+            } else if (price < 0) {
+                rank_boost_price.innerHTML = "Your target rank must be higher than your current rank"
+            } else {
+                rank_boost_price_id.innerHTML = ` = Rp. ${price}`
+            }
+        }
+
+        function calculateDuoGames() {
+            const duo_games_price_id = document.getElementById('duo_games_price')
+            const price_per_tier = 40000;
+            let current_rank = current_rank_selection2.value.split("_").slice(0, 2).join(" ").toLowerCase();
+            let target_rank = target_rank_selection2.value !== "Radiant_Rank.webp"
+                ? target_rank_selection2.value.split("_").slice(0, 2).join(" ").toLowerCase()
+                : target_rank_selection2.value.split("_").slice(0, 1).join(" ").toLowerCase();
+
+            let current_index = rank_order.indexOf(current_rank)
+            let target_index = rank_order.indexOf(target_rank)
+
+            let price = (target_index - current_index) * price_per_tier
+
+            if (price === 0) {
+                duo_games_price_id.innerHTML = "Cannot boost on the same rank"
+            } else if (price < 0) {
+                rank_boost_price.innerHTML = "Your target rank must be higher than your current rank"
+            } else {
+                duo_games_price_id.innerHTML = ` = Rp. ${price}`
+            }
+        }
 
 
     </script>
