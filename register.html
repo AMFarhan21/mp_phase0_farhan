@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Authentication</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="font-mono w-screen h-screen">
+
+    <main
+        class="text-white w-full h-full flex flex-col justify-center items-center bg-[url(./images/valorantWallpaper2.jpg)] bg-center bg-cover relative z-1">
+        <form onsubmit="register(event)"
+            class="z-10 mx-auto justify-between items-center max-w-[600px] w-full bg-white text-black p-4 rounded-xl space-y-4">
+            <h1 class="font-bold text-4xl text-center drop-shadow-[0_0_8em_#646cffaa]">Register</h1>
+            <div id="input_container" class="space-y-4">
+                <input id="username" type="text" placeholder="Enter your username"
+                    class="border-b-1 focus:outline-none px-4 py-1 w-full" required />
+                <input id="email" type="text" placeholder="Enter your email"
+                    class="border-b-1 focus:outline-none px-4 py-1 w-full" required />
+                <input id="password" type="password" placeholder="Enter your password"
+                    class="border-b-1 focus:outline-none px-4 py-1 w-full" required />
+            </div>
+            <button type="submit"
+                class="bg-red-600 px-6 py-2 rounded-lg text-white w-full cursor-pointer">Register</button>
+        </form>
+        <p class="text-white z-1">
+            Already have an account? <a href="./login.html" class="text-blue-500">Login</a>
+        </p>
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+    </main>
+    <script>
+        async function register(e) {
+            e.preventDefault()
+
+            const input_container = document.getElementById("input_container")
+            const username = document.getElementById("username").value
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+
+            try {
+                const response = await fetch("http://localhost:3000/register", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ username, email, password })
+                });
+
+
+
+                const res = await response.json()
+
+                if (!res.success) {
+                    const oldError = document.getElementById("error-msg")
+                    if (oldError) oldError.remove()
+
+                    const errorMsg = document.createElement("span")
+                    errorMsg.id = "error-msg"
+                    errorMsg.innerHTML = res.message;
+                    errorMsg.className = "text-red-600 flex justify-center"
+                    input_container.appendChild(errorMsg)
+                }
+
+                if (res.success) {
+                    alert(res.message)
+                    window.location.replace("./login.html")
+                }
+
+
+
+            } catch (error) {
+                console.error("ERROR on register", error)
+                throw error;
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

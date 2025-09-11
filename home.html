@@ -34,8 +34,9 @@
                 <li><a href="./contact.html"
                         class="list-none hover:bg-white hover:text-black p-2 md:px-4 md:py-2 rounded-lg cursor-pointer">Contact
                         Us</a></li>
-                <li><a href="./login_register.html"
-                        class="list-none hover:bg-white/80 bg-white text-black  p-2 md:px-4 md:py-2 rounded-lg cursor-pointer">Login</a>
+                <li><a href="./login.html"
+                        class="list-none hover:bg-white/80 bg-white text-black  p-2 md:px-4 md:py-2 rounded-lg cursor-pointer"
+                        id="login">Login</a>
                 </li>
 
             </ul>
@@ -113,6 +114,22 @@
             </div>
         </div>
     </footer>
+    <script>
+        const login = document.getElementById("login");
+
+        const status = sessionStorage.getItem("session");
+        if (status) {
+            login.innerHTML = "Logout"
+            login.addEventListener("click", (e) => {
+                e.preventDefault()
+                if (confirm("Are you sure you want to logout?")) {
+                    sessionStorage.removeItem("session")
+                    login.innerHTML = "Login"
+                    window.location.reload()
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>
