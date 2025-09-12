@@ -79,8 +79,8 @@
             <button type="submit"
                 class="bg-red-600 px-6 py-2 rounded-lg text-white w-full cursor-pointer">Submit</button>
         </form>
-        <table
-            class="z-10 mx-auto justify-between items-center max-w-[1200px] mb-8 w-full bg-white text-black rounded-xl space-y-4 drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]">
+        <table id="table"
+            class="hidden z-10 mx-auto justify-between items-center max-w-[1200px] mb-8 w-full bg-white text-black rounded-xl space-y-4 drop-shadow-[0_0_16px_rgba(255,255,255,0.8)]">
             >
             <thead>
                 <tr>
@@ -204,6 +204,11 @@
                 const result = await response.json()
 
                 const tbody = document.getElementById("tbody")
+
+                const table = document.getElementById("table")
+                if (result.length > 0) {
+                    table.classList.remove("hidden")
+                }
 
                 for (let data of result) {
 
