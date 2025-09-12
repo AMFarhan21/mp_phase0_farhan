@@ -124,10 +124,7 @@
                 </div>
             </div>
             <div class="flex flex-wrap justify-between w-full items-center">
-                <button onclick="calculateRankBoost()" class="bg-white text-black px-4 cursor-pointer">
-                    Calculate Price
-                </button>
-                <div class="flex gap-4 items-center">
+                <div class="flex gap-4 items-center ml-auto">
                     <p id="rank_boost_price" class="font-bold text-2xl max-w-120"></p>
                     <button
                         class="text-xl border-1 px-6 py-2 rounded-lg cursor-pointer hover:bg-white hover:text-black">
@@ -213,10 +210,7 @@
                 </div>
             </div>
             <div class="flex flex-wrap justify-between w-full items-center">
-                <button onclick="calculateDuoGames()" class="bg-white text-black px-4 cursor-pointer">
-                    Calculate Price
-                </button>
-                <div class="flex gap-4 items-center">
+                <div class="flex gap-4 items-center ml-auto">
                     <p id="duo_games_price" class="font-bold text-2xl max-w-120"></p>
                     <button
                         class="text-xl border-1 px-6 py-2 rounded-lg cursor-pointer hover:bg-white hover:text-black">
@@ -235,7 +229,10 @@
         <div
             class="mx-auto justify-between max-w-[1200px] w-full p-6 md:p-12 space-y-4 gap-4 grid md:grid-cols-3 grid-cols-1 ">
             <div class="border-b-1 md:border-b-0 pb-4 md:border-r-1 md:pr-4 md:mr-4 space-y-2">
-                <h4 class="text-xl md:text-3xl font-bold">ValBoost</h4>
+                <div class="flex items-center">
+                    <img src="./images/valorant.webp" class="w-8" />
+                    <h4 class="text-xl md:text-3xl font-bold">ValBoost</h4>
+                </div>
                 <p class="text-sm md:text-base text-white/60 text-justify">
                     ValBoost isnt endorsed or in any way affiliated with Riot Games. All trademarks and logos belong
                     to their respective owners. All submitted art content remains copyright of its original copyright
@@ -305,19 +302,23 @@
         // RANK BOOSTING
         current_rank_selection1.addEventListener("change", () => {
             current_rank_img1.src = `./images/${current_rank_selection1.value}`;
+            calculateRankBoost()
         });
 
         target_rank_selection1.addEventListener("change", () => {
             target_rank_img1.src = `./images/${target_rank_selection1.value}`;
+            calculateRankBoost()
         });
 
         // DUO GAMES
         current_rank_selection2.addEventListener("change", () => {
             current_rank_img2.src = `./images/${current_rank_selection2.value}`;
+            calculateDuoGames()
         });
 
         target_rank_selection2.addEventListener("change", () => {
             target_rank_img2.src = `./images/${target_rank_selection2.value}`;
+            calculateDuoGames()
         });
 
 
@@ -380,6 +381,9 @@
                 duo_games_price_id.innerHTML = `Rp. ${price}`
             }
         }
+
+        calculateRankBoost()
+        calculateDuoGames()
 
 
     </script>
