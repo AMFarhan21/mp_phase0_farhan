@@ -63,7 +63,8 @@
         </form>
         <form onsubmit="submitUpdate(event)" id="update_modal"
             class="hidden fixed z-50 border-1 inset-0 mt-20 mx-auto justify-between items-center max-w-[600px] w-full h-110 bg-white text-black p-4 rounded-xl space-y-4 drop-shadow-[0_0_16px_black]">
-            <button onclick="closeModal()" class="text-red-600 text-2xl font-bold cursor-pointer">X</button>
+            <button type="button" onclick="closeModal()"
+                class="text-red-600 text-2xl font-bold cursor-pointer">X</button>
             <h1 class="font-bold text-4xl text-center">Update Contact Message</h1>
             <div id="input_container" class="space-y-4">
                 <input id="update_name" type="text" placeholder="Name"
